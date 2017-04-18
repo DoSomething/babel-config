@@ -1,0 +1,26 @@
+{
+  "name": "@dosomething/babel-config",
+  "version": "1.0.0",
+  "description": "Shared Babel preset for DoSomething.org projects.",
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Furnes <dfurnes@dosomething.org>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-plugin-lodash": "^3.2.11"
+  }
+}
