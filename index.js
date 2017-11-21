@@ -1,7 +1,11 @@
+const runningTests = process.env.NODE_ENV === 'test';
+
 module.exports = {
   presets: [
     [require('babel-preset-env'), {
-      modules: false
+      // Jest needs CommonJS modules to run in Node. If building for
+      // Webpack 3, don't compile modules so we can use scope hoisting.
+      modules: runningTests ? 'commonjs' : false
     }],
     require('babel-preset-react'),
   ],
@@ -15,6 +19,6 @@ module.exports = {
       presets: [
         require('babel-preset-react-optimize'),
       ]
-    }
-  }
+    },
+  },
 };
