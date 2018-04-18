@@ -5,7 +5,9 @@ module.exports = {
     [require('babel-preset-env'), {
       // Jest needs CommonJS modules to run in Node. If building for
       // Webpack 3, don't compile modules so we can use scope hoisting.
-      modules: runningTests ? 'commonjs' : false
+      modules: runningTests ? 'commonjs' : false,
+      // Replace 'babel-polyfill' with only polyfills for target browsers.
+      useBuiltIns: true,
     }],
     require('babel-preset-react'),
   ],
