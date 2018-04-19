@@ -3,11 +3,6 @@ const runningTests = process.env.NODE_ENV === 'test';
 module.exports = {
   presets: [
     [require('babel-preset-env'), {
-      // We only target the latest 2 versions of browsers & Firefox
-      // ESR (schools!), excluding "dead" browsers (<0.5% global usage).
-      targets: {
-        browsers: ['last 2 versions', 'Firefox ESR', 'not dead'],
-      },
       // Jest needs CommonJS modules to run in Node. If building for
       // Webpack 3, don't compile modules so we can use scope hoisting.
       modules: runningTests ? 'commonjs' : false,
