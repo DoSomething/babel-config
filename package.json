@@ -1,6 +1,6 @@
 {
   "name": "@dosomething/babel-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Shared Babel preset for DoSomething.org projects.",
   "engines": {
     "node": ">= 6.0.0",
