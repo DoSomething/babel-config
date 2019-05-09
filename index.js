@@ -1,6 +1,6 @@
 const runningTests = process.env.NODE_ENV === 'test';
 
-module.exports = {
+module.exports = () => ({
   presets: [
     [require('@babel/preset-env'), {
       // Set our supported browsers. <goo.gl/w43BMg>
@@ -38,4 +38,4 @@ module.exports = {
       ],
     },
   },
-};
+});
