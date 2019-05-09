@@ -2,7 +2,7 @@ const runningTests = process.env.NODE_ENV === 'test';
 
 module.exports = {
   presets: [
-    [require('babel-preset-env'), {
+    [require('@babel/preset-env'), {
       // Set our supported browsers. <goo.gl/w43BMg>
       targets: {
         browsers: ['>0.5%', 'ie 11', 'not op_mini all'],
@@ -13,18 +13,19 @@ module.exports = {
       // Replace 'babel-polyfill' with only polyfills for target browsers.
       useBuiltIns: true,
     }],
-    require('babel-preset-react'),
+    require('@babel/preset-react'),
   ],
   plugins: [
-    require('babel-plugin-lodash'),
+    require('@babel/plugin-proposal-object-rest-spread'),
+    require('@babel/plugin-proposal-class-properties'),
     require('babel-plugin-transform-export-extensions'),
-    require('babel-plugin-transform-object-rest-spread'),
-    require('babel-plugin-transform-class-properties'),
+    require('babel-plugin-lodash'),
   ],
   env: {
     production: {
-      presets: [
-        require('babel-preset-react-optimize'),
+      plugins: [
+        require('@babel/plugin-transform-react-constant-elements')
+        require('babel-plugin-transform-react-remove-prop-types')
       ]
     },
   },
