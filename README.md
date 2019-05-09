@@ -1,6 +1,8 @@
 # babel-config
 
-This is our shared [Babel](http://babeljs.io) config, used when compiling JavaScript for the web at [DoSomething.org](https://www.dosomething.org/). It transforms the [latest ECMAScript language features](https://babeljs.io/docs/en/babel-preset-env) to ES5 for widespread browser support & adds [support for React](https://babeljs.io/docs/en/babel-preset-react) (with optimizations for [constant elements](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements) and [smaller production builds](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)!).
+This is our shared [Babel](http://babeljs.io) config, used when compiling JavaScript for the web at [DoSomething.org](https://www.dosomething.org/).
+
+It adds support for the [latest language features](https://babeljs.io/docs/en/babel-preset-env) in older browsers, [React's JSX syntax](https://babeljs.io/docs/en/babel-preset-react) (with optimizations for [faster re-renders](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements) and [smaller production builds](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)!), [pre-compiled GraphQL queries](https://www.apollographql.com/docs/react/recipes/babel#using-babel-plugin-graphql-tag), and dynamic imports (for [Webpack](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import) and [Node](https://github.com/airbnb/babel-plugin-dynamic-import-node)).
 
 We've also enabled support for the [export extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-export-extensions) and [object spread properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread) proposals.
 

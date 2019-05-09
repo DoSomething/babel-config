@@ -18,15 +18,23 @@ module.exports = {
   plugins: [
     require('@babel/plugin-proposal-object-rest-spread'),
     require('@babel/plugin-proposal-class-properties'),
-    require('babel-plugin-transform-export-extensions'),
+    require('@babel/plugin-syntax-dynamic-import'),
+    require('@babel/plugin-proposal-export-default-from'),
+    require('@babel/plugin-proposal-export-namespace-from'),
+    require('babel-plugin-graphql-tag'),
     require('babel-plugin-lodash'),
   ],
   env: {
     production: {
       plugins: [
-        require('@babel/plugin-transform-react-constant-elements')
-        require('babel-plugin-transform-react-remove-prop-types')
-      ]
+        require('@babel/plugin-transform-react-constant-elements'),
+        require('babel-plugin-transform-react-remove-prop-types'),
+      ],
+    },
+    test: {
+      plugins: [
+        require('babel-plugin-dynamic-import-node'),
+      ],
     },
   },
 };
