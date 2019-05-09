@@ -11,7 +11,7 @@ module.exports = () => ({
       // Webpack 3, don't compile modules so we can use scope hoisting.
       modules: runningTests ? 'commonjs' : false,
       // Replace 'babel-polyfill' with only polyfills for target browsers.
-      useBuiltIns: true,
+      useBuiltIns: 'usage',
     }],
     require('@babel/preset-react'),
   ],
