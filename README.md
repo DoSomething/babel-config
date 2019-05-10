@@ -10,7 +10,7 @@ We've also enabled support for the [export extensions](https://github.com/babel/
 Install this package via NPM: 
 
 ```
-npm install @babel/core @dosomething/babel-config --save-dev
+npm install @babel/core @dosomething/babel-config core-js --save-dev
 ```
 
 Specify as a preset in your `package.json`:
