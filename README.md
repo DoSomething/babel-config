@@ -20,7 +20,23 @@ Specify as a preset in your `package.json`:
 {
   // ...
   "babel": {
-    "presets": ["@dosomething"],
+    "presets": [
+      "@dosomething"
+    ]
+  }
+}
+```
+
+### Configuration
+By default, [polyfills](https://remysharp.com/2010/10/08/what-is-a-polyfill) for any newer platform features used in your application will be included in your compiled bundle. If this project doesn't support older browsers or is using a [polyfill service](https://polyfill.io/v3/), you can opt out like so:
+
+```js
+{
+  // ...
+  "babel": {
+    "presets": [
+      ["@dosomething", { "withPolyfills": false }]
+    ]
   }
 }
 ```
