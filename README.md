@@ -20,7 +20,7 @@ Specify as a preset in your `package.json`:
 {
   // ...
   "babel": {
-    "preset": "@dosomething/babel-preset",
+    "presets": ["@dosomething"],
   }
 }
 ```
