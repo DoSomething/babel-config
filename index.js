@@ -12,6 +12,7 @@ module.exports = () => ({
       modules: runningTests ? 'commonjs' : false,
       // Replace 'babel-polyfill' with only polyfills for target browsers.
       useBuiltIns: 'usage',
+      corejs: 3,
     }],
     require('@babel/preset-react'),
   ],
