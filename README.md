@@ -1,6 +1,6 @@
-# babel-config
+# babel-preset
 
-This is our shared [Babel](http://babeljs.io) config, used when compiling JavaScript for the web at [DoSomething.org](https://www.dosomething.org/).
+This is our shared [Babel](http://babeljs.io) preset, used when compiling JavaScript for the web at [DoSomething.org](https://www.dosomething.org/).
 
 It adds support for the [latest language features](https://babeljs.io/docs/en/babel-preset-env) in older browsers, [React's JSX syntax](https://babeljs.io/docs/en/babel-preset-react) (with optimizations for [faster re-renders](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements) and [smaller production builds](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)!), [pre-compiled GraphQL queries](https://www.apollographql.com/docs/react/recipes/babel#using-babel-plugin-graphql-tag), and dynamic imports (for [Webpack](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import) and [Node](https://github.com/airbnb/babel-plugin-dynamic-import-node)).
 
@@ -26,6 +26,6 @@ Specify as a preset in your `package.json`:
 ```
 
 ### License
-&copy; DoSomething.org. Our Babel config is free software, and may be redistributed under the
-terms specified in the [LICENSE](https://github.com/DoSomething/babel-config/blob/master/LICENSE) file. The
+&copy; DoSomething.org. Our Babel preset is free software, and may be redistributed under the
+terms specified in the [LICENSE](https://github.com/DoSomething/babel-preset/blob/master/LICENSE) file. The
 name and logo for DoSomething.org are trademarks of Do Something, Inc and may not be used without permission.
