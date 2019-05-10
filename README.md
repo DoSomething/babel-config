@@ -10,7 +10,8 @@ We've also enabled support for the [export extensions](https://github.com/babel/
 Install this package via NPM: 
 
 ```
-npm install @babel/core @dosomething/babel-config core-js --save-dev
+npm install @babel/core @dosomething/babel-preset --save-dev
+npm install @babel/runtime core-js --save
 ```
 
 Specify as a preset in your `package.json`:
@@ -19,7 +20,7 @@ Specify as a preset in your `package.json`:
 {
   // ...
   "babel": {
-    "preset": "@dosomething/babel-config",
+    "preset": "@dosomething/babel-preset",
   }
 }
 ```
