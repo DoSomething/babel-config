@@ -1,10 +1,10 @@
 {
-  "name": "@dosomething/babel-config",
+  "name": "@dosomething/babel-preset",
   "version": "2.2.2",
   "description": "Shared Babel preset for DoSomething.org projects.",
   "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 5.0.0"
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
   },
   "main": "index.js",
   "scripts": {
@@ -12,13 +12,24 @@
   },
   "author": "David Furnes <dfurnes@dosomething.org>",
   "license": "MIT",
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "core-js": "^3.0.1"
+  },
   "dependencies": {
-    "babel-plugin-lodash": "^3.3.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-react-optimize": "^1.0.1"
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-react-constant-elements": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-graphql-tag": "^2.1.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   }
 }

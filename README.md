@@ -1,12 +1,17 @@
-# babel-config
+# babel-preset
 
-This is our shared [Babel](http://babeljs.io) config used for writing JavaScript at DoSomething.org. It compiles the [latest ECMAScript standard](https://github.com/babel/babel-preset-env) to ES5 for widespread browser support, adds support for [JSX & Flow](https://github.com/babel/babel/tree/master/packages/babel-preset-react) (with [optimizations](https://github.com/thejameskyle/babel-react-optimize)!), and adds support for experimental [export extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-export-extensions) and [object spread properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread).
+This is our shared [Babel](http://babeljs.io) preset, used when compiling JavaScript for the web at [DoSomething.org](https://www.dosomething.org/).
+
+It adds support for the [latest language features](https://babeljs.io/docs/en/babel-preset-env) in older browsers, [React's JSX syntax](https://babeljs.io/docs/en/babel-preset-react) (with optimizations for [faster re-renders](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements) and [smaller production builds](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)!), [pre-compiled GraphQL queries](https://www.apollographql.com/docs/react/recipes/babel#using-babel-plugin-graphql-tag), and dynamic imports (for [Webpack](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import) and [Node](https://github.com/airbnb/babel-plugin-dynamic-import-node)).
+
+We've also enabled support for the [export extensions](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-export-extensions) and [object spread properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread) proposals.
 
 ### Getting Started
 Install this package via NPM: 
 
 ```
-npm install @dosomething/babel-config --save-dev
+npm install @babel/core @dosomething/babel-preset --save-dev
+npm install @babel/runtime core-js --save
 ```
 
 Specify as a preset in your `package.json`:
@@ -15,12 +20,12 @@ Specify as a preset in your `package.json`:
 {
   // ...
   "babel": {
-    "preset": "@dosomething/babel-config",
+    "presets": ["@dosomething"],
   }
 }
 ```
 
 ### License
-&copy;2017 DoSomething.org. @dosomething/babel-config is free software, and may be redistributed under the
-terms specified in the [LICENSE](https://github.com/DoSomething/webpack-config/blob/master/LICENSE) file. The
+&copy; DoSomething.org. Our Babel preset is free software, and may be redistributed under the
+terms specified in the [LICENSE](https://github.com/DoSomething/babel-preset/blob/master/LICENSE) file. The
 name and logo for DoSomething.org are trademarks of Do Something, Inc and may not be used without permission.
